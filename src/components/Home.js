@@ -1,4 +1,3 @@
-// src/components/Home/Home.js
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -6,13 +5,15 @@ import { FaArrowRight, FaShieldAlt, FaMicrochip, FaTools, FaHeadset } from 'reac
 import products from '../data/products';
 import '../style-sheet/Home.css';
 
+import imagenBannerHome from '../images/home/banner-safonic-colombia.jpg';
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   // Tomamos algunos productos destacados
-  const featuredProducts = products.slice(0, 4);
+  const featuredProducts = products.slice(0, 6);
 
   return (
     <motion.div
@@ -30,14 +31,14 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1>Tecnología Innovadora para Tu Empresa</h1>
+            <h1>Tecnología innovadora para potenciar tu negocio</h1>
             <p>
               Explora nuestra selección de productos tecnológicos de alta calidad 
               diseñados para optimizar y modernizar tu negocio o hogar.
             </p>
             <div className="hero-buttons">
               <Link to="/productos" className="btn btn-primary">
-                Ver Productos <FaArrowRight />
+                Ver productos <FaArrowRight />
               </Link>
               <Link to="/contacto" className="btn btn-secondary">
                 Contáctanos
@@ -50,7 +51,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <img src="/images/hero-image.png" alt="Tecnología Safonic" />
+            <img src={imagenBannerHome} alt="Tecnología Safonic" />
           </motion.div>
         </div>
       </section>
@@ -58,9 +59,9 @@ const Home = () => {
       {/* Features Section */}
       <section className="features section">
         <div className="container">
-          <h2 className="section-title">¿Por Qué Elegirnos?</h2>
+          <h2 className="section-title">¿Por qué elegirnos?</h2>
           <p className="section-subtitle">
-            En SafonicPlatform nos distinguimos por ofrecer productos de la más alta calidad con un servicio personalizado.
+            En Safonic nos distinguimos por ofrecer productos de la más alta calidad con un servicio personalizado.
           </p>
 
           <div className="features-grid">
@@ -75,7 +76,7 @@ const Home = () => {
               <div className="feature-icon">
                 <FaShieldAlt />
               </div>
-              <h3>Calidad Garantizada</h3>
+              <h3>Calidad garantizada</h3>
               <p>Todos nuestros productos cuentan con garantía y están fabricados con los más altos estándares de calidad.</p>
             </motion.div>
 
@@ -90,7 +91,7 @@ const Home = () => {
               <div className="feature-icon">
                 <FaMicrochip />
               </div>
-              <h3>Tecnología Avanzada</h3>
+              <h3>Tecnología avanzada</h3>
               <p>Ofrecemos las últimas innovaciones tecnológicas para mantener tu negocio a la vanguardia del mercado.</p>
             </motion.div>
 
@@ -105,7 +106,7 @@ const Home = () => {
               <div className="feature-icon">
                 <FaTools />
               </div>
-              <h3>Soporte Técnico</h3>
+              <h3>Soporte técnico</h3>
               <p>Contamos con un equipo especializado que te ayudará con la instalación y el mantenimiento de tus productos.</p>
             </motion.div>
 
@@ -120,7 +121,7 @@ const Home = () => {
               <div className="feature-icon">
                 <FaHeadset />
               </div>
-              <h3>Atención Personalizada</h3>
+              <h3>Atención personalizada</h3>
               <p>Te brindamos asesoría especializada para encontrar las soluciones que mejor se adapten a tus necesidades.</p>
             </motion.div>
           </div>
@@ -130,10 +131,9 @@ const Home = () => {
       {/* Featured Products Section */}
       <section className="featured-products section">
         <div className="container">
-          <h2 className="section-title">Productos Destacados</h2>
+          <h2 className="section-title">Productos destacados</h2>
           <p className="section-subtitle">
             Conoce nuestra selección de productos más populares y descubre cómo pueden mejorar tu experiencia tecnológica.
-            Continuación de src/components/Home/Home.js
           </p>
 
           <div className="products-grid">
@@ -153,7 +153,7 @@ const Home = () => {
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <Link to={`/productos#${product.category}`} className="product-link">
+                  <Link to={`/productos/categoria/${product.category}`} className="product-link">
                     Ver detalles <FaArrowRight />
                   </Link>
                 </div>
@@ -163,7 +163,7 @@ const Home = () => {
 
           <div className="view-all-button">
             <Link to="/productos" className="btn btn-primary">
-              Ver Todos los Productos <FaArrowRight />
+              Ver más productos <FaArrowRight />
             </Link>
           </div>
         </div>
@@ -182,7 +182,7 @@ const Home = () => {
             <h2>¿Listo para mejorar tu experiencia tecnológica?</h2>
             <p>Nuestro equipo está preparado para brindarte la mejor asesoría y encontrar las soluciones ideales para ti.</p>
             <Link to="/contacto" className="btn btn-primary">
-              Contáctanos Ahora <FaArrowRight />
+              Contáctanos ahora <FaArrowRight />
             </Link>
           </motion.div>
         </div>

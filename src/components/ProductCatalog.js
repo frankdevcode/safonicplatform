@@ -1,20 +1,32 @@
-// src/components/ProductCatalog/ProductCatalog.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { FaFilter, FaTimes } from 'react-icons/fa';
 import products from '../data/products';
 import ProductCard from './ProductCard';
 import '../style-sheet/ProductCatalog.css';
 
 const ProductCatalog = () => {
+  const { categoryId } = useParams();
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState('all');
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const location = useLocation();
+  
+  // Extracción de categorías única con useMemo para evitar recálculos innecesarios
+  const categories = useMemo(() => {
+    return ['all', ...new Set(products.map(product => product.category))];
+  }, []);
 
-  // Extraer categorías únicas
-  const categories = ['all', ...new Set(products.map(product => product.category))];
+  // Establecer la categoría activa basada en los parámetros de la URL
+  useEffect(() => {
+    if (categoryId && categories.includes(categoryId)) {
+      setActiveCategory(categoryId);
+    } else if (!categoryId) {
+      setActiveCategory('all');
+    }
+    window.scrollTo(0, 0);
+  }, [categoryId, categories]);
 
   // Filtrar productos por categoría
   useEffect(() => {
@@ -25,15 +37,16 @@ const ProductCatalog = () => {
     }
   }, [activeCategory]);
 
-  // Verificar si hay un hash en la URL para establecer la categoría inicial
-  useEffect(() => {
-    const hash = location.hash.substring(1);
-    if (hash && categories.includes(hash)) {
-      setActiveCategory(hash);
+  // Manejar cambio de categoría
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    if (category === 'all') {
+      navigate('/productos');
+    } else {
+      navigate(`/productos/categoria/${category}`);
     }
-    
-    window.scrollTo(0, 0);
-  }, [location, categories]);
+    setIsFilterOpen(false);
+  };
 
   // Traducir nombres de categorías para mostrar
   const getCategoryName = (category) => {
@@ -83,10 +96,7 @@ const ProductCatalog = () => {
               <li key={category}>
                 <button
                   className={activeCategory === category ? 'active' : ''}
-                  onClick={() => {
-                    setActiveCategory(category);
-                    setIsFilterOpen(false);
-                  }}
+                  onClick={() => handleCategoryChange(category)}
                 >
                   {getCategoryName(category)}
                 </button>
@@ -107,7 +117,7 @@ const ProductCatalog = () => {
               <h3>No se encontraron productos en esta categoría</h3>
               <button 
                 className="btn btn-primary" 
-                onClick={() => setActiveCategory('all')}
+                onClick={() => handleCategoryChange('all')}
               >
                 Ver todos los productos
               </button>

@@ -1,87 +1,96 @@
+// importando las imágenes de los productos
+import luminariaLedSolar from '../images/home/products/luminaria-led-solar.jpg';
+import amazonEchoDot from '../images/home/products/amazon-echo-dot.jpg';
+import cctvCamera from '../images/home/products/cctv-camera.jpg';
+import mototools from '../images/home/products/kit-mototool-herramienta.jpg';
+import digitalLocks from '../images/home/products/cerradura-inteligente.jpg';
+import smartphones from '../images/home/products/celular-motorola.jpg';
+
 // src/data/products.js
 const products = [
   {
     id: 1,
-    name: "Luces LED Inteligentes",
+    name: " Luminaria LED Solar",
     category: "led",
-    description: "Iluminación inteligente controlable vía app con millones de colores y escenas personalizables.",
-    image: "/images/products/led-lights.jpg",
+    description: "Iluminación automática con sensor hasta 6 metros, portátil, fácil instalación y sin mantenimiento.",
+    image: luminariaLedSolar,
     features: [
-      "Control mediante aplicación móvil",
-      "Compatible con asistentes de voz",
-      "16 millones de colores",
-      "Programación horaria",
-      "Bajo consumo energético"
+      "Panel solar de alta eficiencia",
+      "Batería recargable de larga duración",
+      "Resistente al agua y polvo (IP65)",
+      "Encendido automático al anochecer",
+      "Diseño compacto y ligero"
     ]
   },
   {
     id: 2,
-    name: "Reloj Inteligente SafonicWatch",
-    category: "smartwatches",
-    description: "Monitorea tu salud y mantente conectado con notificaciones, llamadas y múltiples funciones deportivas.",
-    image: "/images/products/smartwatches.jpg",
+    name: "Amazon Echo Dot",
+    category: "audio",
+    description: "Asistente de voz inteligente con altavoz y micrófono integrados para controlar tus dispositivos y obtener información.",
+    image: amazonEchoDot,
     features: [
-      "Monitoreo cardíaco 24/7",
-      "Resistente al agua IP68",
-      "Batería de larga duración (hasta 7 días)",
-      "Pantalla AMOLED de alta resolución",
-      "Más de 100 modos deportivos"
+      "Diseño compacto y elegante",
+      "Control por voz con Alexa",
+      "Conexión Bluetooth y WiFi",
+      "Compatible con dispositivos inteligentes",
+      "Múltiples funciones y habilidades"
+      
     ]
   },
   {
     id: 3,
-    name: "Smartphone SafonicX Pro",
-    category: "smartphones",
-    description: "Potente smartphone con cámara profesional, procesador de última generación y pantalla de alta resolución.",
-    image: "/images/products/smartphones.jpg",
-    features: [
-      "Cámara de 108MP con estabilización óptica",
-      "Procesador octa-core de 3.0GHz",
-      "Pantalla AMOLED de 6.7 pulgadas",
-      "Batería de 5000mAh con carga rápida",
-      "Sistema operativo personalizado"
-    ]
-  },
-  {
-    id: 4,
-    name: "Taladro Inalámbrico SafoDrill",
-    category: "tools",
-    description: "Herramienta de alta potencia con batería de larga duración para trabajos profesionales y domésticos.",
-    image: "/images/products/drills.jpg",
-    features: [
-      "Motor sin escobillas para mayor eficiencia",
-      "Batería intercambiable de 20V",
-      "Dos velocidades ajustables",
-      "Incluye maletín y accesorios",
-      "Diseño ergonómico y ligero"
-    ]
-  },
-  {
-    id: 5,
-    name: "Cerradura Digital SafoLock",
-    category: "security",
-    description: "Sistema de seguridad inteligente con múltiples métodos de acceso y registro de entradas.",
-    image: "/images/products/digital-locks.jpg",
-    features: [
-      "Desbloqueo por huella, código y aplicación",
-      "Alarma de manipulación integrada",
-      "Batería de respaldo para emergencias",
-      "Historial de acceso en tiempo real",
-      "Instalación sencilla sin cableado"
-    ]
-  },
-  {
-    id: 6,
-    name: "Cámara de Seguridad SafoVision",
+    name: " Cámara de Seguridad CCTV",
     category: "security",
     description: "Vigilancia de alta definición con visión nocturna y detección inteligente de movimiento.",
-    image: "/images/products/security-camera.jpg",
+    image: cctvCamera,
     features: [
       "Grabación en 4K Ultra HD",
       "Visión nocturna infrarroja hasta 30m",
       "Detección inteligente de personas",
       "Almacenamiento en la nube o local",
-      "Audio bidireccional"
+      "Micrófono doble vía"
+    ]
+  },
+  {
+    id: 4,
+    name: "Kit Mototool 180W + 110 Accesorios",
+    category: "tools",
+    description: "Herramienta multifunción para cortar, lijar, pulir y más, con accesorios intercambiables.",
+    image: mototools,
+    features: [
+      "Potencia de 180W y velocidad variable",
+      "110 accesorios para diferentes tareas",
+      "Diseño ergonómico y compacto",
+      "Fácil cambio de accesorios",
+      "Maletín de transporte incluido"
+    ]
+  },
+  {
+    id: 5,
+    name: "Cerradura Inteligente 5 Modos De Acceso",
+    category: "security",
+    description: "Accede fácilmente a tu hogar con seguridad inteligente avanzada y 5 modos de acceso.",
+    image: digitalLocks,
+    features: [
+      "5 métodos de desbloqueo",
+      "Teclado retroiluminado",
+      "Registro de accesos y notificaciones",
+      "Diseño resistente y duradero",
+      "Fácil instalación y configuración"
+    ]
+  },
+  {
+    id: 6,
+    name: "Celular Motorola G04s 128GB", 
+    category: "smartphones",
+    description: "Diseño elegante, pantalla vibrante, sonido Dolby Atmos®, cámara inteligente con IA y batería duradera.",
+    image: smartphones,
+    features: [
+      "Pantalla Max Vision de 6.56 pulgadas",
+      "Modelo G 04 s 128GB",
+      "Cámara posterior de 16 MP",
+      "Duración batería 1 - 2 dias",
+      "Sistema operativo Android 11"
     ]
   },
   {

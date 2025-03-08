@@ -1,9 +1,9 @@
-// src/components/Header/Header.js
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../style-sheet/Header.css';
+import logo from '../images/header/safonic-colombia-logo-black.png'; // Asegúrate de que la ruta sea correcta
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,13 +39,14 @@ const Header = () => {
       <div className="container header-container">
         <div className="logo">
           <Link to="/">
-            <motion.div
+            <motion.img
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-            >
-              <h1>Safonic<span>Platform</span></h1>
-            </motion.div>
+              src={logo}
+              alt="Logo de Safonic Platform"
+              className="logo-img"
+            />
           </Link>
         </div>
 

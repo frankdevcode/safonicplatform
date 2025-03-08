@@ -1,4 +1,3 @@
-// src/components/ProductCatalog/ProductCard.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaInfoCircle } from 'react-icons/fa';
