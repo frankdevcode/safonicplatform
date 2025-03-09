@@ -74,7 +74,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               className={location.pathname === '/contacto' ? 'active' : ''}
             >
-              <Link to="/contacto">Contacto</Link>
+              <Link to="/blog">Blog</Link>
             </motion.li>
           </ul>
         </nav>

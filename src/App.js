@@ -10,6 +10,7 @@ import About from './components/About';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import CookiePolicy from './components/CookiePolicy';
+import Blog from './components/Blog';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="/privacidad" element={<PrivacyPolicy />} />
               <Route path="/terminos" element={<TermsAndConditions />} />
               <Route path="/cookies" element={<CookiePolicy />} />
+              <Route path="/blog" element={<Blog />} />
             </Routes>
           </AnimatePresence>
         </main>
