@@ -1,4 +1,3 @@
-// src/components/Contact/Contact.js
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaCheckCircle } from 'react-icons/fa';
@@ -98,7 +97,7 @@ const Contact = () => {
 
       <div className="container contact-container">
         <div className="contact-info">
-          <h2>Información de Contacto</h2>
+          <h2>Información de contacto</h2>
           <p>Utiliza cualquiera de los siguientes métodos para comunicarte con nuestro equipo de atención al cliente.</p>
           
           <div className="info-items">
@@ -107,8 +106,8 @@ const Contact = () => {
                 <FaPhone />
               </div>
               <div className="info-content">
-                <h3>Teléfono</h3>
-                <p>+52 55 1234 5678</p>
+                <h3>WhatsApp</h3>
+                <p>+57 317 6282979</p>
                 <p>Lunes a Viernes: 9am - 6pm</p>
               </div>
             </div>
@@ -119,8 +118,8 @@ const Contact = () => {
               </div>
               <div className="info-content">
                 <h3>Email</h3>
-                <p>info@safonicplatform.com</p>
-                <p>soporte@safonicplatform.com</p>
+                <p>soporte.ac@safonic.com</p>
+                <p>info@safonic.com</p>
               </div>
             </div>
             
@@ -130,15 +129,15 @@ const Contact = () => {
               </div>
               <div className="info-content">
                 <h3>Dirección</h3>
-                <p>Av. Tecnológica 1234</p>
-                <p>Ciudad Innovación, CP 12345</p>
+                <p>Av. Tecnológica 123</p>
+                <p>Innovación</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="contact-form-container">
-          <h2>Envíanos un Mensaje</h2>
+          <h2>Envíanos un mensaje</h2>
           <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
           
           {isSubmitted && (
@@ -220,8 +219,6 @@ const Contact = () => {
             <motion.button
               type="submit"
               className="btn btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               Enviar Mensaje
             </motion.button>

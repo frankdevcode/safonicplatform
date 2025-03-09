@@ -5,6 +5,8 @@ import cctvCamera from '../images/home/products/cctv-camera.jpg';
 import mototools from '../images/home/products/kit-mototool-herramienta.jpg';
 import digitalLocks from '../images/home/products/cerradura-inteligente.jpg';
 import smartphones from '../images/home/products/celular-motorola.jpg';
+import routerGigabit from '../images/home/products/router-gigabit.jpg';
+import ventiladorTecho from '../images/home/products/ventilador-de-techo.jpg';
 
 // src/data/products.js
 const products = [
@@ -41,7 +43,7 @@ const products = [
     id: 3,
     name: " Cámara de Seguridad CCTV",
     category: "security",
-    description: "Vigilancia de alta definición con visión nocturna y detección inteligente de movimiento.",
+    description: "Vigilancia de alta definición con visión nocturna y detección inteligente de movimiento para proteger tu hogar o negocio.",
     image: cctvCamera,
     features: [
       "Grabación en 4K Ultra HD",
@@ -67,9 +69,9 @@ const products = [
   },
   {
     id: 5,
-    name: "Cerradura Inteligente 5 Modos De Acceso",
+    name: "Cerradura Inteligente",
     category: "security",
-    description: "Accede fácilmente a tu hogar con seguridad inteligente avanzada y 5 modos de acceso.",
+    description: "Accede fácilmente a tu hogar con seguridad inteligente avanzada y 5 modos de acceso diferentes para mayor comodidad.",
     image: digitalLocks,
     features: [
       "5 métodos de desbloqueo",
@@ -95,30 +97,30 @@ const products = [
   },
   {
     id: 7,
-    name: "Sistema de Audio SafoSound",
-    category: "audio",
-    description: "Altavoces inteligentes con calidad de sonido premium y conectividad multipunto.",
-    image: "/images/products/audio-system.jpg",
+    name: "Router TP-Link Archer AX55",
+    category: "networking",
+    description: "Conectividad de alta velocidad con gestión inteligente de red y máxima cobertura inalámbrica para tu hogar.",
+    image: routerGigabit,
     features: [
-      "Sonido envolvente de 360°",
-      "Conectividad Bluetooth 5.0 y WiFi",
-      "Controles por voz integrados",
-      "Sincronización con múltiples dispositivos",
-      "Diseño elegante y compacto"
+      "Velocidad de conexión 0 - 574 Mbps",
+      "Número de puertos 5",
+      "Control parental avanzado",
+      "Optimización automática de red",
+      "Antenas de alta ganancia"
     ]
   },
   {
     id: 8,
-    name: "Router WiFi SafoConnect",
-    category: "networking",
-    description: "Conectividad de alta velocidad con gestión inteligente de red y máxima cobertura.",
-    image: "/images/products/router.jpg",
+    name: "Ventilador Techo con Luz E27",
+    category: "home",
+    description: "Ventilador de techo decorativo de 52 pulgadas en acabado bronce, con luz integrada E27 (40W). Silencioso, eficiente y fácil de instalar.",
+    image: ventiladorTecho,
     features: [
-      "Tecnología WiFi 6 (802.11ax)",
-      "Velocidad combinada de hasta 5.4 Gbps",
-      "Control parental avanzado",
-      "Optimización automática de red",
-      "8 antenas de alta ganancia"
+      "Motor silencioso y eficiente",
+      "3 velocidades de ventilación",
+      "Modelo 20122-9",
+      "Cantidad de aspas : 5",
+      "Control remoto incluido"
     ]
   }
 ];

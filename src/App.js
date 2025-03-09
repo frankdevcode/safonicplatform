@@ -7,6 +7,9 @@ import Home from './components/Home';
 import ProductCatalog from './components/ProductCatalog';
 import Contact from './components/Contact';
 import About from './components/About';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
+import CookiePolicy from './components/CookiePolicy';
 import './App.css';
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
               <Route path="/productos/categoria/:categoryId" element={<ProductCatalog />} />
               <Route path="/contacto" element={<Contact />} />
               <Route path="/nosotros" element={<About />} />
+              <Route path="/privacidad" element={<PrivacyPolicy />} />
+              <Route path="/terminos" element={<TermsAndConditions />} />
+              <Route path="/cookies" element={<CookiePolicy />} />
             </Routes>
           </AnimatePresence>
         </main>

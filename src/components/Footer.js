@@ -5,13 +5,16 @@ import { motion } from 'framer-motion';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import '../style-sheet/Footer.css';
 
+// Importando logo de footer
+import logo from '../images/footer/safonic-colombia-logo-white.png';
+
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-info">
           <div className="footer-logo">
-            <h2>Safonic<span>Platform</span></h2>
+            <img src={logo} alt="Safonic Colombia Logo" className="footer-logo-img" />
             <p>Soluciones tecnológicas innovadoras para empresas y hogares modernos.</p>
           </div>
           <div className="footer-contact">
@@ -19,15 +22,15 @@ const Footer = () => {
             <ul>
               <li>
                 <FaMapMarkerAlt />
-                <span>Av. Tecnológica 1234, Ciudad Innovación</span>
+                <span>Av. Tecnológica 123, Innovación</span>
               </li>
               <li>
                 <FaPhone />
-                <span>+52 55 1234 5678</span>
+                <span>+57 317 628 29 79</span>
               </li>
               <li>
                 <FaEnvelope />
-                <span>info@safonicplatform.com</span>
+                <span>info@safonic.com</span>
               </li>
             </ul>
           </div>
@@ -46,18 +49,30 @@ const Footer = () => {
           <div className="link-group">
             <h3>Productos</h3>
             <ul>
-              <li><Link to="/productos#led">Luces LED</Link></li>
-              <li><Link to="/productos#smartwatches">Relojes Inteligentes</Link></li>
-              <li><Link to="/productos#smartphones">Celulares</Link></li>
-              <li><Link to="/productos#tools">Herramientas</Link></li>
+              <li><Link to="/productos/categoria/led">Luces LED</Link></li>
+              <li><Link to="/productos/categoria/audio">Audio y Sonido</Link></li>
+              <li><Link to="/productos/categoria/security">Seguridad y Vigilancia</Link></li>
+              <li><Link to="/productos/categoria/tools">Herramientas y Equipos</Link></li>
             </ul>
           </div>
           <div className="link-group">
             <h3>Legal</h3>
             <ul>
-              <li><Link to="/privacidad">Política de Privacidad</Link></li>
-              <li><Link to="/terminos">Términos y Condiciones</Link></li>
-              <li><Link to="/cookies">Política de Cookies</Link></li>
+              <li>
+                <Link to="/privacidad" target="_blank" rel="noopener noreferrer">
+                  Política de Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link to="/terminos" target="_blank" rel="noopener noreferrer">
+                  Términos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookies" target="_blank" rel="noopener noreferrer">
+                  Política de Cookies
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -80,7 +95,7 @@ const Footer = () => {
             </motion.a>
           </div>
           <p className="copyright">
-            &copy; {new Date().getFullYear()} SafonicPlatform. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Safonic Colombia. Todos los derechos reservados.
           </p>
         </div>
       </div>

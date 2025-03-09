@@ -179,7 +179,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2>¿Listo para mejorar tu experiencia tecnológica?</h2>
+            <h2> ¿Necesitas ayuda para elegir el producto adecuado?</h2>
             <p>Nuestro equipo está preparado para brindarte la mejor asesoría y encontrar las soluciones ideales para ti.</p>
             <Link to="/contacto" className="btn btn-primary">
               Contáctanos ahora <FaArrowRight />

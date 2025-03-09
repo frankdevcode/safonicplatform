@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { FaCheckCircle, FaUsers, FaLightbulb, FaHandshake, FaRocket, FaArrowRight } from 'react-icons/fa';
 import '../style-sheet/About.css';
 
+import nuestraHistoria from '../images/about/nuestra-historia.jpg';
+
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,7 +23,7 @@ const About = () => {
       <div className="about-header">
         <div className="container">
           <h1>Sobre Nosotros</h1>
-          <p>Conoce más sobre SafonicPlatform y nuestra misión de ofrecer soluciones tecnológicas innovadoras.</p>
+          <p>Conoce más sobre Safonic y nuestra misión de ofrecer soluciones tecnológicas innovadoras.</p>
         </div>
       </div>
 
@@ -37,7 +39,7 @@ const About = () => {
             >
               <h2>Nuestra Historia</h2>
               <p>
-                SafonicPlatform nació en 2018 con una visión clara: hacer que la tecnología avanzada sea accesible para empresas y hogares por igual. Comenzamos como una pequeña empresa con grandes ideas y hemos crecido hasta convertirnos en un referente en soluciones tecnológicas innovadoras.
+                Safonic nació en 2018 con una visión clara: hacer que la tecnología avanzada sea accesible para empresas y hogares por igual. Comenzamos como una pequeña empresa con grandes ideas y hemos crecido hasta convertirnos en un referente en soluciones tecnológicas innovadoras.
               </p>
               <p>
                 Lo que nos distingue es nuestro compromiso con la calidad y el servicio personalizado. Cada producto que ofrecemos ha sido cuidadosamente seleccionado para asegurar la mejor experiencia para nuestros clientes.
@@ -70,7 +72,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src="/images/about-company.jpg" alt="SafonicPlatform Historia" />
+              <img src={nuestraHistoria} alt="Safonic Colombia Historia" />
             </motion.div>
           </div>
         </div>
@@ -185,8 +187,8 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2>¿Listo para conocer nuestros productos?</h2>
-            <p>Explora nuestro catálogo y descubre cómo nuestras soluciones pueden transformar tu experiencia tecnológica.</p>
+            <h2>¿Necesitas ayuda para elegir el producto adecuado?</h2>
+            <p>Nuestro equipo está preparado para brindarte la mejor asesoría y encontrar las soluciones ideales para ti.</p>
             <Link to="/productos" className="btn btn-primary">
               Ver Productos <FaArrowRight />
             </Link>

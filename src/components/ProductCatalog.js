@@ -52,13 +52,14 @@ const ProductCatalog = () => {
   const getCategoryName = (category) => {
     const categoryNames = {
       'all': 'Todos',
-      'led': 'Luces LED',
-      'smartwatches': 'Relojes Inteligentes',
-      'smartphones': 'Celulares',
-      'tools': 'Herramientas',
-      'security': 'Seguridad',
-      'audio': 'Audio',
-      'networking': 'Redes'
+      'led': 'Iluminación LED',
+      'audio': 'Audio y Sonido',
+      'security': 'Seguridad y Vigilancia',
+      'tools': 'Herramientas y Equipos',
+      'smartphones': 'Smartphones y Tablets',
+      'networking': 'Redes y Conectividad',
+      'home': 'Hogar y Oficina',
+      'accessories': 'Accesorios y Periféricos'
     };
     
     return categoryNames[category] || category;

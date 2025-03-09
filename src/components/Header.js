@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../style-sheet/Header.css';
-import logo from '../images/header/safonic-colombia-logo-black.png'; // Asegúrate de que la ruta sea correcta
+import logo from '../images/header/safonic-colombia-logo-black.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

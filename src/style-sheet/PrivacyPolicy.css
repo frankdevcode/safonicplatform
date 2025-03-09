@@ -1,0 +1,86 @@
+/* Estilos para la página de Política de Privacidad */
+.privacy-policy-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.privacy-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.privacy-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  color: #64748b;
+  font-style: italic;
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.privacy-section {
+  margin-bottom: 30px;
+}
+
+.privacy-section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section h2 {
+  font-size: 1.5rem;
+  color: #334155;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.privacy-section p, 
+.privacy-section ul, 
+.privacy-section address {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-section li {
+  margin-bottom: 8px;
+}
+
+.privacy-section strong {
+  color: #334155;
+}
+
+.privacy-section address {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-section {
+    padding: 60px 20px;
+  }
+  
+  .privacy-content {
+    padding: 30px 20px;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2rem;
+  }
+} 
