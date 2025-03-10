@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { FaSearch, FaCalendarAlt, FaUser, FaTag, FaClock } from 'react-icons/fa';
 
+// Importando las imagenes del blog
 import lucesLedHogar from '../images/blog/blog-luces-led-hogar.jpg';
 import seguridadHogar from '../images/blog/blog-seguridad-hogar.jpg';
 import audioMultiroom from '../images/blog/blog-audio-multiroom.jpg';
@@ -23,7 +24,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Iluminación',
     author: 'Carlos Rodríguez',
-    date: '2023-10-15',
+    date: '2024-10-15',
     readTime: '5 min',
     image: lucesLedHogar,
     featured: true
@@ -36,7 +37,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Audio',
     author: 'Ana Martínez',
-    date: '2023-09-28',
+    date: '2024-09-28',
     readTime: '8 min',
     image: audioInalambrico,
     featured: false
@@ -49,7 +50,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Seguridad',
     author: 'Miguel Ángel Torres',
-    date: '2023-09-10',
+    date: '2024-09-10',
     readTime: '6 min',
     image: seguridadHogar,
     featured: true
@@ -62,7 +63,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Herramientas',
     author: 'Laura Gómez',
-    date: '2023-08-22',
+    date: '2024-08-22',
     readTime: '7 min',
     image: herramientasProfesionales,
     featured: false
@@ -75,7 +76,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Iluminación',
     author: 'Carlos Rodríguez',
-    date: '2023-08-05',
+    date: '2024-08-05',
     readTime: '4 min',
     image: blogIluminacióninteligente,
     featured: false
@@ -88,7 +89,7 @@ const blogPosts = [
     content: 'Contenido completo del artículo...',
     category: 'Audio',
     author: 'Ana Martínez',
-    date: '2023-07-18',
+    date: '2024-07-18',
     readTime: '9 min',
     image: audioMultiroom,
     featured: true
@@ -252,10 +253,10 @@ const Blog = () => {
                       className="blog-post-card"
                       variants={fadeIn}
                     >
-                      <div className="post-image">
+                      <Link to={`/blog/${post.slug}`} className="post-image">
                         <img src={post.image} alt={post.title} />
                         <span className="post-category"><FaTag /> {post.category}</span>
-                      </div>
+                      </Link>
                       <div className="post-content">
                         <h3>{post.title}</h3>
                         <p>{post.excerpt}</p>
@@ -327,4 +328,4 @@ const Blog = () => {
   );
 };
 
-export default Blog; 
+export default Blog;

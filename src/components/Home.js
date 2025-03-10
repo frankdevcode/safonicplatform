@@ -169,8 +169,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Nueva sección */}
-      
+      {/* Nueva sección */}   
+
 
       {/* Call to Action Section */}
       <section className="cta section">

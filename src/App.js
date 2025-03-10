@@ -11,6 +11,8 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import CookiePolicy from './components/CookiePolicy';
 import Blog from './components/Blog';
+import BlogPostDetail from './components/BlogPostDetail';
+import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
 
 function App() {
@@ -30,10 +32,12 @@ function App() {
               <Route path="/terminos" element={<TermsAndConditions />} />
               <Route path="/cookies" element={<CookiePolicy />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPostDetail />} />
             </Routes>
           </AnimatePresence>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
